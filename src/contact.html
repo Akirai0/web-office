@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ติดต่อเรา - AmartCloud</title>
-    <link rel="shortcut icon" href="../images/icon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/icon/favicon.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.js" defer=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -897,23 +897,13 @@
 
 <body class="bg-gray-50">
     <div id="nav"></div>
-    <script>
-        // ตรวจสอบการโหลดไฟล์ navbar.html
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav').innerHTML = data;
-            })
-            .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด navbar:', error));
-    </script>
-
     <main class="pb-20">
         <div class="max-w-7xl mx-auto px-4 py-8">
             <!-- Navbar -->
             <div id="nav"></div>
             <script>
                 // ตรวจสอบการโหลดไฟล์ navbar.html
-                fetch('navbar.html')
+                fetch('/componnent/navbar.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('nav').innerHTML = data;
@@ -1063,7 +1053,7 @@
     <div id="footer"></div>
     <script>
         // ตรวจสอบการโหลดไฟล์ footer.html
-        fetch('footer.html')
+        fetch('/componnent/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;

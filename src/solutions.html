@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บริการของเรา - AmartCloud</title>
-    <link rel="shortcut icon" href="../images/icon/favicon.ico" type="image/x-icon">
+    <title>โซลูชันของเรา - AmartCloud</title>
+    <link rel="shortcut icon" href="/images/icon/favicon.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.js" defer=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -587,6 +586,10 @@
             justify-content: space-between
         }
 
+        .gap-2 {
+            gap: 0.5rem
+        }
+
         .gap-4 {
             gap: 1rem
         }
@@ -897,53 +900,58 @@
             }
         }
     </style>
+</head>
 
 <body class="bg-gray-50">
     <!-- navbar -->
     <div id="nav" class="sticky top-0 z-50"></div>
     <script>
         // ตรวจสอบการโหลดไฟล์ navbar.html
-        fetch('navbar.html')
+        fetch('/componnent/navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('nav').innerHTML = data;
             })
             .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด navbar:', error));
     </script>
-
-    <!-- Main -->
     <main class="pb-20">
         <div class="max-w-7xl mx-auto px-4 py-8">
+            <!-- Desktop Layout -->
             <div class="md:grid md:grid-cols-1 gap-8">
                 <!-- Main Content -->
                 <div class="col-span-9">
+                    <!-- Breadcrumbs -->
                     <nav class="mb-8">
                         <ol class="flex items-center space-x-2">
                             <li><a href="index.html" class="text-gray-500 hover:text-gray-700">หน้าแรก</a></li>
                             <li class="flex items-center">
                                 <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
-                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd"></path>
+                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z">
+                                    </path>
                                 </svg>
-                                <span class="text-gray-900">บริการของเรา</span>
+                                <span class="text-gray-900">โซลูชันของเรา</span>
                             </li>
                         </ol>
                     </nav>
-
-                    <!-- Services Grid -->
+                    <!-- Solutions Grid -->
                     <div class="bg-white rounded-xl shadow-sm p-6">
-                        <h2 class="text-2xl font-semibold mb-6">บริการของเรา</h2>
+                        <h2 class="text-2xl font-semibold mb-6">โซลูชันของเรา</h2>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_1.html'">
-                                <img src="/images/services/itservice.webp" alt="วางระบบไอที"
+                            <div class="bg-white rounded-lg border hover-lift">
+                                <img src="/images/solutions/edu.webp" alt="ระบบเครือข่ายสำหรับสถานศึกษา"
                                     class="w-full h-48 object-cover rounded-t-lg">
                                 <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">วางระบบไอที</h3>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <use href="/icons/school.svg#icon"></use>
+                                        </svg>
+                                        <h3 class="font-medium text-gray-900">ระบบเครือข่ายสำหรับสถานศึกษา</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600">สถานศึกษา</p>
                                     <p class="text-sm text-gray-500 mt-2">
-                                        บริการวางระบบ IT Network ที่จะทำให้ธุรกิจของคุณเติบโตอย่างมั่นคงและปลอดภัย
-                                    </p>
+                                        โซลูชันเครือข่ายที่ออกแบบมาเฉพาะสำหรับสถานศึกษา </p>
                                     <div class="mt-4">
                                         <ul class="space-y-2">
                                             <li class="flex items-center text-sm text-gray-600">
@@ -952,7 +960,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบเครือข่ายไร้สาย Wi-Fi 6
+                                                ระบบ WiFi ครอบคลุมทั้งโรงเรียน
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -960,7 +968,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบจัดการ Network Switch
+                                                ระบบจัดการผู้ใช้งานและการเข้าถึง
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -968,7 +976,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบป้องกันการเข้าถึงเครือข่าย (Authentication)
+                                                ระบบกรองเนื้อหา
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -976,7 +984,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบจัดการเครือข่าย LAN และ WAN
+                                                ระบบประชุมทางไกล
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -984,27 +992,11 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบเชื่อมต่อข้อมูลระยะไกล (VPN)
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                ระบบป้องกันความปลอดภัยเครือข่าย (Firewall)
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                ระบบบริหารจัดการเครือข่ายจากศูนย์กลาง (Network Monitoring)
+                                                ระบบรักษาความปลอดภัย
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="/service_detail/service_detail_1.html"
+                                    <a href="solution_detail.php?id=1"
                                         class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
                                         รายละเอียดเพิ่มเติม
                                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1012,21 +1004,26 @@
                                                 d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </a>
-                                    <a href="/service_detail/service_detail_1.html"
+                                    <a href="service_detail.html"
                                         class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
                                         รายละเอียดเพิ่มเติม
                                     </a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_2.html'">
-                                <img src="/images/services/software.webp" alt="พัฒนาซอฟต์แวร์"
+                            <div class="bg-white rounded-lg border hover-lift">
+                                <img src="/images/solutions/internethotspot.webp" alt="ระบบจัดการที่พัก"
                                     class="w-full h-48 object-cover rounded-t-lg">
                                 <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">พัฒนาซอฟต์แวร์</h3>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <use href="/icons/hotel.svg#icon"></use>
+                                        </svg>
+                                        <h3 class="font-medium text-gray-900">ระบบจัดการที่พัก</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600">หอพัก โรงแรม รีสอร์ท คอนโด</p>
                                     <p class="text-sm text-gray-500 mt-2">
-                                        เราคือผู้เชี่ยวชาญด้านการพัฒนาซอฟต์แวร์ ออกแบบตามความต้องการเฉพาะขององค์กร
-                                    </p>
+                                        โซลูชันครบวงจรสำหรับธุรกิจที่พัก </p>
                                     <div class="mt-4">
                                         <ul class="space-y-2">
                                             <li class="flex items-center text-sm text-gray-600">
@@ -1035,7 +1032,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                พัฒนาเว็บไซต์องค์กร
+                                                ระบบ WiFi สำหรับผู้เข้าพัก
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1043,7 +1040,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบจัดการฐานข้อมูล
+                                                ระบบควบคุมการเข้าออก
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1051,7 +1048,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบบริหารความสัมพันธ์ลูกค้า (CRM)
+                                                ระบบกล้องวงจรปิด
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1059,7 +1056,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                พัฒนาแอปพลิเคชันมือถือ iOS และ Android
+                                                ระบบจองห้องพัก
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1067,11 +1064,11 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบบริหารจัดการทรัพยากรองค์กร (ERP)
+                                                ระบบชำระเงิน
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="/service_detail/service_detail_2.html"
+                                    <a href="solution_detail.php?id=2"
                                         class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
                                         รายละเอียดเพิ่มเติม
                                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1079,20 +1076,26 @@
                                                 d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </a>
-                                    <a href="/service_detail/service_detail_2.html"
+                                    <a href="service_detail.html"
                                         class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
                                         รายละเอียดเพิ่มเติม
                                     </a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_3.html'">
-                                <img src="/images/services/training.webp" alt="ฝึกอบรม"
+                            <div class="bg-white rounded-lg border hover-lift">
+                                <img src="/images/solutions/bo.webp" alt="ระบบบริหารจัดการองค์กร"
                                     class="w-full h-48 object-cover rounded-t-lg">
                                 <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">ฝึกอบรม</h3>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <use href="/icons/building.svg#icon"></use>
+                                        </svg>
+                                        <h3 class="font-medium text-gray-900">ระบบบริหารจัดการองค์กร</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600">โรงงาน บริษัท สำนักงาน</p>
                                     <p class="text-sm text-gray-500 mt-2">
-                                        อบรมการใช้งานระบบและพัฒนาทักษะด้านไอทีให้บุคลากร </p>
+                                        โซลูชันธุรกิจครบวงจรสำหรับองค์กร </p>
                                     <div class="mt-4">
                                         <ul class="space-y-2">
                                             <li class="flex items-center text-sm text-gray-600">
@@ -1101,7 +1104,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                หลักสูตร MikroTik
+                                                ระบบเครือข่ายองค์กร
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1109,7 +1112,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                หลักสูตร Ubiquiti
+                                                ระบบ ERP
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1117,7 +1120,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                หลักสูตร Synology
+                                                ระบบความปลอดภัย
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1125,7 +1128,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                หลักสูตร Amazon Web Service
+                                                ระบบประชุมทางไกล
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1133,43 +1136,11 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                หลักสูตร IT Security
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                หลักสูตร Network
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                หลักสูตร Cloud Computing
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                หลักสูตร Digital Transformation
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                หลักสูตร Software Development
+                                                ระบบจัดเก็บข้อมูล
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="/service_detail/service_detail_3.html"
+                                    <a href="solution_detail.php?id=3"
                                         class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
                                         รายละเอียดเพิ่มเติม
                                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1177,20 +1148,26 @@
                                                 d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </a>
-                                    <a href="/service_detail/service_detail_3.html"
+                                    <a href="service_detail.html"
                                         class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
                                         รายละเอียดเพิ่มเติม
                                     </a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_4.html'">
-                                <img src="/images/services/security.webp" alt="วางระบบรักษาความปลอดภัย"
+                            <div class="bg-white rounded-lg border hover-lift">
+                                <img src="/images/solutions/bo.webp" alt="ระบบเทคโนโลยีทางการแพทย์"
                                     class="w-full h-48 object-cover rounded-t-lg">
                                 <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">วางระบบรักษาความปลอดภัย</h3>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <use href="/icons/hospital.svg#icon"></use>
+                                        </svg>
+                                        <h3 class="font-medium text-gray-900">ระบบเทคโนโลยีทางการแพทย์</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600">สถานพยาบาลหรือโรงพยาบาล</p>
                                     <p class="text-sm text-gray-500 mt-2">
-                                        ระบบรักษาความปลอดภัยครบวงจร เพื่อความมั่นใจในทุกมิติ </p>
+                                        โซลูชันด้านเทคโนโลยีสารสนเทศสำหรับสถานพยาบาล </p>
                                     <div class="mt-4">
                                         <ul class="space-y-2">
                                             <li class="flex items-center text-sm text-gray-600">
@@ -1199,7 +1176,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบกล้องวงจรปิด (CCTV)
+                                                ระบบ HIS
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1207,7 +1184,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบ Access Control
+                                                ระบบจัดการข้อมูลผู้ป่วย
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1215,7 +1192,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบบันทึกเวลาเข้า-ออกงาน ของพนักงาน
+                                                ระบบเครือข่ายการแพทย์
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1223,7 +1200,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบไม้กั้นประตูอัตโนมัติ ควบคุมการเข้า-ออกยานพาหนะ
+                                                ระบบความปลอดภัยข้อมูล
                                             </li>
                                             <li class="flex items-center text-sm text-gray-600">
                                                 <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
@@ -1231,11 +1208,11 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                ระบบ Security Monitoring
+                                                ระบบประชุมทางการแพทย์
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="/service_detail/service_detail_4.html"
+                                    <a href="solution_detail.php?id=4"
                                         class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
                                         รายละเอียดเพิ่มเติม
                                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1243,348 +1220,7 @@
                                                 d="M9 5l7 7-7 7"></path>
                                         </svg>
                                     </a>
-                                    <a href="/service_detail/service_detail_4.html"
-                                        class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
-                                        รายละเอียดเพิ่มเติม
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_5.html'">
-                                <img src="/images/services/voip.webp" alt="วางระบบโทรศัพท์ภายในองค์กร"
-                                    class="w-full h-48 object-cover rounded-t-lg">
-                                <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">วางระบบโทรศัพท์ภายในองค์กร</h3>
-                                    <p class="text-sm text-gray-500 mt-2">
-                                        ออกแบบและวางระบบโทรศัพท์ที่เหมาะสมกับองค์กรของคุณ </p>
-                                    <div class="mt-4">
-                                        <ul class="space-y-2">
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                ระบบ VoIP แบบ On-Premises PBX
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                ระบบ VoIP แบบ Cloud PBX (Hosted PBX)
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                ระบบ VoIP แบบ Hybrid PBX
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="/service_detail/service_detail_5.html"
-                                        class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
-                                        รายละเอียดเพิ่มเติม
-                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </a>
-                                    <a href="/service_detail/service_detail_5.html"
-                                        class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
-                                        รายละเอียดเพิ่มเติม
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_6.html'">
-                                <img src="/images/services/datacenter.webp" alt="วางระบบ Server &amp; Datacenter"
-                                    class="w-full h-48 object-cover rounded-t-lg">
-                                <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">วางระบบ Server &amp; Datacenter</h3>
-                                    <p class="text-sm text-gray-500 mt-2">
-                                        วางระบบการจัดเก็บข้อมูลไปจนถึงการจัดการเครือข่ายครบวงจร
-                                        ให้คุณมั่นใจในคุณภาพมาตรฐานและความปลอดภัย </p>
-                                    <div class="mt-4">
-                                        <ul class="space-y-2">
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบพื้นที่จัดเก็บข้อมูลส่วนกลาง (NAS Server)
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบการสำรองและกู้คืนข้อมูล (Backup &amp; Recovery)
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบจัดเก็บไฟล์และเอกสาร (File Server)
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบ Application Server
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบ Web Server
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบ DNS Server
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบเครือข่ายใน Data Center
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                วางระบบ Cloud Server
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                การบริหารจัดการเซิร์ฟเวอร์ Server Management System
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="/service_detail/service_detail_6.html"
-                                        class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
-                                        รายละเอียดเพิ่มเติม
-                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </a>
-                                    <a href="/service_detail/service_detail_6.html"
-                                        class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
-                                        รายละเอียดเพิ่มเติม
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_7.html'">
-                                <img src="/images/services/ma.webp" alt="IT Support &amp; IT Maintenance Services"
-                                    class="w-full h-48 object-cover rounded-t-lg">
-                                <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">IT Support &amp; IT Maintenance Services
-                                    </h3>
-                                    <p class="text-sm text-gray-500 mt-2">
-                                        บริการที่ให้การช่วยเหลือและดูแลรักษาระบบ IT ขององค์กร ทั้ง Online และ Onsite
-                                    </p>
-                                    <div class="mt-4">
-                                        <ul class="space-y-2">
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการดูแลเว็บไซต์ &amp; แอปพลิเคชัน
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการดูแลระบบคลาวด์ &amp; Server
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการแก้ไขปัญหาคอมพิวเตอร์ผ่านทาง Online และการรีโมทครบวงจร
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                IT Call Center : บริการให้คำปรึกษาแก้ไขปัญหา
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการ Onsite Service ระบบเครือข่าย Network
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการ Onsite Service ระบบโทรศัพท์ภายในองค์กร
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการ Onsite Service ระบบ CCTV &amp; Access Control
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการ Onsite Service ระบบคอมพิวเตอร์ Hardware &amp; Software
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="/service_detail/service_detail_7.html"
-                                        class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
-                                        รายละเอียดเพิ่มเติม
-                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </a>
-                                    <a href="/service_detail/service_detail_7.html"
-                                        class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
-                                        รายละเอียดเพิ่มเติม
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded-lg border hover-lift"
-                                onclick="location.href='/service_detail/service_detail_8.html'">
-                                <img src="/images/services/design-install.webp" alt="บริการออกแบบและติดตั้ง"
-                                    class="w-full h-48 object-cover rounded-t-lg">
-                                <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">บริการออกแบบและติดตั้ง</h3>
-                                    <p class="text-sm text-gray-500 mt-2">
-                                        บริการให้คำปรึกษา ออกแบบด้านนวัตกรรมเทคโนโลยีและติดตั้งครบวงจร
-                                        โดยทีมงานมืออาชีพ
-                                    </p>
-                                    <div class="mt-4">
-                                        <ul class="space-y-2">
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการออกแบบและติดตั้งระบบเครือข่ายภายในองค์กร
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการออกแบบและติดตั้งระบบเครือข่ายรักษาความปลอดภัย
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการออกแบบและติดตั้งระบบสำรองข้อมูล
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการออกแบบ Website สำหรับองค์กร
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการเดินสาย LAN &amp; Fiber
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการเข้าหัวแลน &amp; สไปรท์สายไฟเบอร์
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการติดตั้งอุปกรณ์ไอที
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการติดตั้งห้อง Datacenter
-                                            </li>
-                                            <li class="flex items-center text-sm text-gray-600">
-                                                <svg class="w-4 h-4 mr-2 text-orange-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                บริการติดตั้งและจัดสายภายในตู้ Rack
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="/service_detail/service_detail_8.html"
-                                        class="hidden md:inline-flex items-center text-orange-500 hover:text-orange-600 mt-4">
-                                        รายละเอียดเพิ่มเติม
-                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M9 5l7 7-7 7"></path>
-                                        </svg>
-                                    </a>
-                                    <a href="/service_detail/service_detail_8.html"
+                                    <a href="service_detail.html"
                                         class="block w-full text-center bg-orange-500 text-white py-2 rounded-lg mt-3 md:hidden hover:bg-orange-600 transition-colors duration-200">
                                         รายละเอียดเพิ่มเติม
                                     </a>
@@ -1596,24 +1232,22 @@
             </div>
         </div>
     </main>
-
     <!-- footer -->
     <div id="footer"></div>
     <script>
         // ตรวจสอบการโหลดไฟล์ footer.html
-        fetch('footer.html')
+        fetch('/componnent/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             })
             .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด footer:', error));
     </script>
-
     <!-- Footer Navbar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50 md:hidden">
         <div class="grid grid-cols-5 h-16">
             <a href="services.html"
-                class="flex flex-col items-center justify-center text-orange-500 hover:bg-orange-600 hover:text-white transition-colors duration-300">
+                class="flex flex-col items-center justify-center text-gray-500 hover:bg-orange-600 hover:text-white transition-colors duration-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
@@ -1622,7 +1256,7 @@
                 <span class="text-xs mt-1">บริการของเรา</span>
             </a>
             <a href="solutions.html"
-                class="flex flex-col items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-colors duration-300">
+                class="flex flex-col items-center justify-center text-orange-500 hover:bg-orange-600 hover:text-white transition-colors duration-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
