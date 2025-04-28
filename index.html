@@ -514,13 +514,9 @@
     .h-16 {
         height: 4rem
     }
-    .h-9{
-        height: 8rem;
-    }
     .h-4 {
         height: 1rem
     }
-
     .h-48 {
         height: 12rem
     }
@@ -933,11 +929,11 @@
                 </div>
                 <div class="grid grid-cols-3 gap-4 mt-4">
                     <img src="/images/articles/b2.jpg" alt="bg"
-                        class="w-full h-9 object-cover rounded-lg hover:h-56 transition-all duration-300"">
+                        class="w-full object-cover rounded-lg hover:h-56 transition-all duration-300" style="height: 8rem;">
                     <img src=" /images/articles/b2.jpg" alt="bg"
-                        class="w-full h-9 object-cover rounded-lg hover:h-56 transition-all duration-300">
+                        class="w-full h-9 object-cover rounded-lg hover:h-56 transition-all duration-300" style="height: 8rem;">
                     <img src="/images/articles/b2.jpg" alt="bg"
-                        class="w-full h-9 object-cover rounded-lg hover:h-56 transition-all duration-300">
+                        class="w-full h-9 object-cover rounded-lg hover:h-56 transition-all duration-300" style="height: 8rem;">
                 </div>
             </div>
 
@@ -949,6 +945,9 @@
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-1 gap-6">
                         <div class="grid grid-cols-2 rounded-lg border hover-lift" x-data="{open: false}">
+                            <img src="/images/articles/b2.jpg" alt="Cybersecurity สำหรับองค์กร"
+                                :class="open ? 'h-56' : 'h-60'"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900">Cybersecurity สำหรับองค์กร</h3>
                                 <p class="text-sm text-gray-500 mt-2">
@@ -980,9 +979,6 @@
                                     </svg>
                                 </button>
                             </div>
-                            <img src="/images/articles/b2.jpg" alt="Cybersecurity สำหรับองค์กร"
-                                :class="open ? 'h-56' : 'h-60'"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
                         </div>
                         <!-- 2 -->
                         <div class="grid grid-cols-2 bg-white rounded-lg border hover-lift" x-data="{open: false}">
@@ -1022,6 +1018,9 @@
                             </div>
                         </div>
                         <div class="grid grid-cols-2 bg-white rounded-lg border hover-lift" x-data="{open: false}">
+                            <img src="/images/articles/4step/page.webp" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                :class="open ? 'h-56' : 'h-48'"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900">คู่มือการตั้งค่า MikroTik ง่ายๆ</h3>
                                 <p class="text-sm text-gray-500 mt-2">ในปี 2025 เทคโนโลยีมีการพัฒนาอย่างก้าวกระโดด
@@ -1053,9 +1052,7 @@
                                     </svg>
                                 </button>
                             </div>
-                            <img src="/images/articles/4step/page.webp" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
-                                :class="open ? 'h-56' : 'h-48'"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            
                         </div>
                     </div>
                 </div>
