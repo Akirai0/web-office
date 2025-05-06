@@ -973,138 +973,140 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 py-8">
             <div class="col-span-9">
-                <!-- Latest Articles A-->
+                <!-- Contact -->
+                <div class="grid grid-cols-2 bg-white rounded-lg  hover-lift">
+                    <img src="/images/articles/b2.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                        class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                    <div class="p-4">
+                        <h3 class="text-2xl font-semibold text-gray-900">เกี่ยวกับเรา</h3>
+                        <p class="text-sm text-gray-500 mt-2">xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxx</p>
+
+                        <div class="text-right mt-6">
+                            <a href="#"
+                                class="py-1 px-2 rounded-full bg-orange-500 text-white hover:bg-orange-600 lg:px-6 lg:rounded-full lg:text-sm font-medium transition-colors">อ่านทั้งหมด</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- service -->
                 <div class="bg-white rounded-xl shadow-sm p-6 mb-4">
-                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-1">
-                        <div class="grid grid-cols-2 gap-6 lg:grid-cols-4 rounded-lg">
-                            <img src="/images/articles/bs.jpg" alt="บริการ"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out hover-lift">
-                            <img src="/images/articles/bst.jpg" alt="โซลูชัน"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out hover-lift">
-                            <img src="/images/articles/ba.jpg" alt="หลักสูตรอบรม"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out hover-lift">
-                            <img src="/images/articles/bm.jpg" alt="ผลงาน"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out hover-lift">
-                        </div>
-                        <div class="flex justify-between items-center mt-6">
-                            <h2 class="text-2xl font-semibold">บทความล่าสุด</h2>
-                            <a href="#" class="text-xl text-orange-500 px-3 hover:text-orange-600 font-medium transition-colors">ทั้งหมด</a>
-                        </div>
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                            <div class="grid grid-cols-1 rounded-lg border hover-lift" x-data="{open: false}">
-                                <img src="/images/articles/b2.jpg" alt="Cybersecurity สำหรับองค์กร"
-                                    :class="open ? 'h-80' : 'h-60'"
-                                    class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
-                                <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">Cybersecurity สำหรับองค์กร</h3>
-                                    <p class="text-sm text-gray-500 mt-2">
-                                        ความปลอดภัยทางไซเบอร์เป็นสิ่งที่องค์กรต้องให้ความส </p>
-                                    <div x-show="open" x-transition:enter="transition ease-out duration-500"
-                                        x-transition:enter-start="opacity-0 max-h-0"
-                                        class="text-sm text-gray-500 mt-2 overflow-hidden">
-                                        <p>
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                        </p>
-                                    </div>
-                                    <button @click="open = !open"
-                                        class="mt-3 inline-flex items-center text-orange-500 hover:text-orange-600 focus:outline-none">
-                                        <span x-text="open ? 'แสดงน้อยลง' : 'เพิ่มเติม'"></span>
-                                        <svg :class="open ? 'rotate-180' : 'rotate-0'"
-                                            class="w-4 h-4 ml-1 transform transition-transform duration-300" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 9l7 7 7-7" />
-                                        </svg>
-                                    </button>
-                                </div>
+                    <div class="flex justify-center items-center mt-6">
+                        <h2 class="text-2xl font-semibold mb-6">บริการของเรา</h2>
+                    </div>
+                    <div class="grid grid-cols-2 bg-white rounded-lg gap-4 mt-4 lg:grid-cols-4">
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
                             </div>
-                            <!-- 2 -->
-                            <div class="grid grid-cols-1 bg-white rounded-lg border hover-lift" x-data="{open: false}">
-                                <img src="/images/articles/b2.jpg" alt="Cloud Computing สำหรับ SME"
-                                    :class="open ? 'h-80' : 'h-60'"
-                                    class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
-                                <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">Cloud Computing สำหรับ SME</h3>
-                                    <p class="text-sm text-gray-500 mt-2">Cloud Computing
-                                        กำลังเป็นเทคโนโลยีที่สำคัญสำหรับธุรกิจ SME ด้วยค </p>
-                                    <div x-show="open" x-transition:enter="transition ease-out duration-500"
-                                        x-transition:enter-start="opacity-0 max-h-0"
-                                        class="text-sm text-gray-500 mt-2 overflow-hidden">
-                                        <p>
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                        </p>
-                                    </div>
-                                    <button @click="open = !open"
-                                        class="mt-3 inline-flex items-center text-orange-500 hover:text-orange-600 focus:outline-none">
-                                        <span x-text="open ? 'แสดงน้อยลง' : 'เพิ่มเติม'"></span>
-                                        <svg :class="open ? 'rotate-180' : 'rotate-0'"
-                                            class="w-4 h-4 ml-1 transform transition-transform duration-300" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 9l7 7 7-7" />
-                                        </svg>
-                                    </button>
-                                </div>
+                        </div>
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
                             </div>
-                            <div class="grid grid-cols-1 bg-white rounded-lg border hover-lift" x-data="{open: false}">
-                                <img src="/images/articles/4step/page.webp" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
-                                    :class="open ? 'h-80' : 'h-60'"
-                                    class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
-                                <div class="p-4">
-                                    <h3 class="font-medium text-gray-900">คู่มือการตั้งค่า MikroTik ง่ายๆ</h3>
-                                    <p class="text-sm text-gray-500 mt-2">ในปี 2025 เทคโนโลยีมีการพัฒนาอย่างก้าวกระโดด
-                                        โดยเฉพาะใน </p>
-                                    <div x-show="open" x-transition:enter="transition ease-out duration-500"
-                                        x-transition:enter-start="opacity-0 max-h-0"
-                                        class="text-sm text-gray-500 mt-2 overflow-hidden">
-                                        <p>
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                        </p>
-                                    </div>
-                                    <button @click="open = !open"
-                                        class="mt-3 inline-flex items-center text-orange-500 hover:text-orange-600 focus:outline-none">
-                                        <span x-text="open ? 'แสดงน้อยลง' : 'เพิ่มเติม'"></span>
-                                        <svg :class="open ? 'rotate-180' : 'rotate-0'"
-                                            class="w-4 h-4 ml-1 transform transition-transform duration-300" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 9l7 7 7-7" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                
+                        </div>
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                            <img src="/images/articles/icon-service.jpg" alt="คู่มือการตั้งค่า MikroTik ง่ายๆ"
+                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                            <div class="p-4 text-center">
+                                <h3 class="font-medium text-gray-900">xxxxxxxxxxx</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- ผลงาย -->
+                <!-- article -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-4">
+                    <div class="grid grid-cols-1 bg-white rounded-lg gap-4 mt-4 lg:grid-cols-3">
+
+                        <!-- Sidebar -->
+                        <div>
+                            <h2 class="text-2xl font-semibold mb-4">บทความที่เกี่ยวข้อง</h2>
+                            <ul class="space-y-3">
+                                <li class="text-orange-500 font-medium border-b pb-1">คู่มือ</li>
+                                <li class="border-b pb-1 hover:text-orange-500 cursor-pointer">หัวข้อ</li>
+                                <li class="border-b pb-1 hover:text-orange-500 cursor-pointer">หัวข้อ</li>
+                                <li class="border-b pb-1 hover:text-orange-500 cursor-pointer">หัวข้อ</li>
+                            </ul>
+                        </div>
+
+                        <!-- Article -->
+                        <div class="grid grid-cols-1 bg-white rounded-lg hover-lift lg:col-span-2">
+                            <img src="/images/articles/b2.jpg" alt="" class="w-full h-60 object-cover rounded-lg">
+                            <div class="p-4">
+                                <!-- ห่อข้อความและปุ่มด้วย div ที่จำกัดความกว้าง -->
+                                <div>
+                                    <p class="text-sm text-gray-500 mt-2">xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxx</p>
+                                    <div class="text-right mt-6">
+                                        <a href="#"
+                                            class="py-1 px-2 rounded-full bg-orange-500 text-white hover:bg-orange-600 lg:px-6 lg:rounded-full lg:text-sm font-medium transition-colors">อ่านทั้งหมด</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- works -->
                 <div class="bg-white rounded-xl shadow-sm p-6 mb-4">
                     <div class="flex justify-between items-center mt-6">
                         <h2 class="text-2xl font-semibold">ผลงาน</h2>
@@ -1145,8 +1147,6 @@
                 <div class="bg-white rounded-xl shadow-sm p-6 mb-4">
                     <div class="flex items-center mb-6">
                         <h2 class="text-2xl font-semibold">สินค้าแนะนำ</h2>
-                        <a href="#"
-                            class="text-xl text-orange-500 px-3 hover:text-orange-600 font-medium transition-colors">ทั้งหมด</a>
                     </div>
                     <div class="grid grid-cols-1 bg-white rounded-lg gap-4 lg:grid-cols-4">
                         <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
