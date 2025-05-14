@@ -401,12 +401,15 @@
         .bottom-0 {
             bottom: 0px
         }
+
         .bottom-364 {
             bottom: 364px
         }
+
         .bottom-368 {
             bottom: 368px
         }
+
         .left-0 {
             left: 0px
         }
@@ -966,13 +969,9 @@
             </div>
         </div>
     </nav>
-
     <!-- Main -->
     <div>
-        <img src="/images/a.png" class="lg:absolute top-0 object-cover rounded-b-lg w-full h-144" alt="background">
-        <div class="absolute bottom-364 left-6 text-sm text-white bg-black bg-opacity-40 px-4 py-2 rounded-md lg:bottom-368">
-            <a href="/" class="hover:underline">หน้าแรก</a> &gt; บริการทั้งหมด
-        </div>
+        <img src="/images/a.png" class="object-cover rounded-b-lg lg:absolute lg:top-0 lg:w-full lg:h-[36rem]" alt="background">
     </div>
     <main>
         <div class="max-w-7xl mx-auto px-4 py-8 mt-0 lg:mt-[520px]">
@@ -1124,67 +1123,6 @@
             })
             .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด footer:', error));
     </script>
-    <!-- Footer Navbar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50 md:hidden">
-        <div class="grid grid-cols-5 h-16">
-            <a href="/src/services.html"
-                class="flex flex-col items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
-                    </path>
-                </svg>
-                <span class="text-xs mt-1">บริการของเรา</span>
-            </a>
-            <a href="/src/solutions.html"
-                class="flex flex-col items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="22" y1="12" x2="2" y2="12"></line>
-                        <path
-                            d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z">
-                        </path>
-                        <line x1="6" y1="16" x2="6" y2="16"></line>
-                        <line x1="10" y1="16" x2="10" y2="16"></line>
-                    </svg>
-                </svg>
-                <span class="text-xs mt-1">โซลูชัน</span>
-            </a>
-            <a href="/index.html"
-                class="flex flex-col items-center justify-center text-gray-600 hover:text-orange-600 transition-colors duration-300">
-                <div
-                    class="bg-orange-500 text-white rounded-full p-3 -mt-6 shadow-lg hover:bg-orange-600 transform hover:scale-105 transition-transform duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
-                        </path>
-                    </svg>
-                </div>
-                <span class="text-xs mt-1">หน้าแรก</span>
-            </a>
-
-            <a href="/index.html"
-                class="flex flex-col items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
-                        d="M14.079 6.839a3 3 0 0 0-4.255.1M13 20h1.083A3.916 3.916 0 0 0 18 16.083V9A6 6 0 1 0 6 9v7m7 4v-1a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1Zm-7-4v-6H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1Zm12-6h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6Z" />
-                </svg>
-                <span class="text-xs mt-1">เกี่ยวกับเรา</span>
-            </a>
-
-            <a href="/src/contact.html"
-                class="flex flex-col items-center justify-center text-orange-500 hover:bg-orange-600 hover:text-white transition-colors duration-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-                    </path>
-                </svg>
-                <span class="text-xs mt-1">ติดต่อ</span>
-            </a>
-        </div>
-    </div>
 </body>
 
 </html>
