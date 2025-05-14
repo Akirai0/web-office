@@ -926,65 +926,23 @@
 </style>
 
 <body class="bg-white">
-    <!-- navbar -->
-    <nav class="sticky top-0 bg-white border-b z-50">
-        <div class="flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse ml-3">
-                <img class="h-8" src="../images/Amc-logo.png" alt="AmartCloud">
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
-            <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-                <ul
-                    class="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white">
-                    <li>
-                        <a href="/src/services.html"
-                            class="block py-2 px-3 text-gray-700 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-500 lg:p-1"
-                            aria-current="page">บริการของเรา</a>
-                    </li>
-                    <li>
-                        <a href="/src/solutions.html"
-                            class="block py-2 px-3 text-gray-700 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-500 lg:p-1">โซลูชัน</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-700 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-500 lg:p-1">หลักสูตรอบรม</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-700 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-500 lg:p-1">บทความ</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-700 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-500 lg:p-1">ผลงาน</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-700 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-500 lg:p-1">เกี่ยวกับเรา</a>
-                    </li>
-                    <li>
-                        <a href="/src/contact.html"
-                            class="block py-2 px-3 text-gray-700 rounded-sm hover:bg-gray-100 lg:bg-orange-500 lg:text-white lg:hover:bg-orange-600 lg:px-6 lg:rounded-full lg:text-sm font-medium transition-colors">ติดต่อ</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar -->
+    <div id="nav"></div>
+    <script>
+        // ตรวจสอบการโหลดไฟล์ navbar.html
+        fetch('/componnent/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav').innerHTML = data;
+            })
+            .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด navbar:', error));
+    </script>
     <!-- Main -->
     <main>
         <div class="relative">
             <img src="/images/articles/b2.jpg" alt="" class="w-full h-124 object-cover rounded-lg">
             <!-- Breadcrumb ซ้อนบนภาพ -->
-            <div
-                class="absolute bottom-4 left-6 text-sm text-white bg-black bg-opacity-40 px-4 py-2 rounded-md">
+            <div class="absolute bottom-4 left-6 text-sm text-white bg-black bg-opacity-40 px-4 py-2 rounded-md">
                 <a href="/" class="hover:underline">หน้าแรก</a> &gt; บริการทั้งหมด
             </div>
         </div>
