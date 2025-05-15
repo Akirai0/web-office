@@ -931,7 +931,7 @@
 
 <body class="bg-white">
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white border-b lg:bg-white lg:bg-opacity-30 backdrop-blur-md border-b border-white/30">
+    <nav class="sticky top-0 z-50 bg-white border-b lg:bg-white backdrop-blur-md border-b border-white/30">
         <div class="flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse ml-3">
                 <img class="h-8" src="../images/Amc-logo.png" alt="AmartCloud">
@@ -983,27 +983,35 @@
         </div>
     </nav>
     <div>
-        <img src="/images/a.png" class="object-cover rounded-b-lg lg:absolute lg:top-0 lg:w-full lg:h-[36rem]"
-            alt="background">
-        <div
-            class="hidden lg:block lg:absolute left-6 bottom-[368px] text-sm text-white bg-black bg-opacity-40 px-4 py-2 rounded-md z-10">
-            <a href="/" class="hover:underline">หน้าแรก</a> &gt; ผลงาน
-        </div>
+        <img src="/images/banner/home.png" class="object-cover rounded-b-lg lg:w-full lg:h-[576px]" alt="background">
     </div>
     <!-- Main -->
     <main>
-        <div class="max-w-7xl mx-auto px-4 py-8 lg:mt-[510px]">
+        <div class="max-w-7xl mx-auto px-4 py-8">
             <div class="col-span-9 space-y-2">
+                <nav class="mb-8">
+                    <ol class="flex items-center space-x-2">
+                        <li><a href="/index.html" class="text-gray-500 hover:text-gray-700">หน้าแรก</a></li>
+                        <li class="flex items-center">
+                            <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-orange-500">ผลงาน</span>
+                        </li>
+                    </ol>
+                </nav>
                 <h2 class="text-2xl font-semibold mb-1">ผลงาน</h2>
             </div>
         </div>
-        <!-- image -->
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow p-4 mb-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 mb-6">
+            <!-- image -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
                 <div class="relative h-100 border rounded">
                     <img id="img-0" src="/images/1745998061782.jpg" alt="รูป"
-                        class="w-full h-full object-cover rounded" />
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(0, currentIndexes[0])" />
                     <button onclick="changeImage(0, -1)"
                         class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
                         ‹
@@ -1016,17 +1024,17 @@
                 <div class="mt-4">
                     <div class="text-orange-500 font-semibold">สถานที่</div>
                     <div class="text-sm text-gray-700 leading-snug">
-                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br />
                         xxxxxxxxxxxxxxxxxxxxxxxxxx
                     </div>
                 </div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow p-4 mb-6">
+            <!-- Card2 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
                 <div class="relative h-100 border rounded">
                     <img id="img-1" src="/images/1745998061782.jpg" alt="รูป"
-                        class="w-full h-full object-cover rounded" />
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(1, currentIndexes[1])" />
                     <button onclick="changeImage(1, -1)"
                         class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
                         ‹
@@ -1039,16 +1047,17 @@
                 <div class="mt-4">
                     <div class="text-orange-500 font-semibold">สถานที่</div>
                     <div class="text-sm text-gray-700 leading-snug">
-                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br />
                         xxxxxxxxxxxxxxxxxxxxxxxxxx
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow p-4 mb-6">
+            <!-- Card3 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
                 <div class="relative h-100 border rounded">
                     <img id="img-2" src="/images/1745998061782.jpg" alt="รูป"
-                        class="w-full h-full object-cover rounded" />
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(2, currentIndexes[2])" />
                     <button onclick="changeImage(2, -1)"
                         class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
                         ‹
@@ -1061,16 +1070,17 @@
                 <div class="mt-4">
                     <div class="text-orange-500 font-semibold">สถานที่</div>
                     <div class="text-sm text-gray-700 leading-snug">
-                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br />
                         xxxxxxxxxxxxxxxxxxxxxxxxxx
                     </div>
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="bg-white rounded-xl shadow p-4 mb-6">
+            <!-- Card4 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
                 <div class="relative h-100 border rounded">
                     <img id="img-3" src="/images/1745998061782.jpg" alt="รูป"
-                        class="w-full h-full object-cover rounded" />
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(3, currentIndexes[3])" />
                     <button onclick="changeImage(3, -1)"
                         class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
                         ‹
@@ -1083,23 +1093,33 @@
                 <div class="mt-4">
                     <div class="text-orange-500 font-semibold">สถานที่</div>
                     <div class="text-sm text-gray-700 leading-snug">
-                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br />
                         xxxxxxxxxxxxxxxxxxxxxxxxxx
                     </div>
                 </div>
             </div>
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+                <button class="absolute top-4 right-6 text-white text-4xl font-bold"
+                    onclick="closeLightbox()">&times;</button>
+                <button class="absolute left-4 text-white text-5xl font-bold"
+                    onclick="prevLightboxImage()">&#10094;</button>
+                <img id="lightbox-img" src="" class="max-w-[90vw] max-h-[80vh] rounded shadow-lg" />
+                <button class="absolute right-4 text-white text-5xl font-bold"
+                    onclick="nextLightboxImage()">&#10095;</button>
+            </div>
         </div>
         <!-- Footer -->
-    <div id="footer"></div>
-    <script>
-        // ตรวจสอบการโหลดไฟล์ footer.html
-        fetch('/componnent/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด footer:', error));
-    </script>
+        <div id="footer"></div>
+        <script>
+            // ตรวจสอบการโหลดไฟล์ footer.html
+            fetch('/componnent/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด footer:', error));
+        </script>
     </main>
 
     <script>
@@ -1124,20 +1144,52 @@
                 "/images/1745998131413.jpg",
                 "/images/1745998168578.jpg"
             ]
-
         ];
 
         let currentIndexes = [0, 0, 0, 0];
+        let lightboxCardIndex = 0;
+        let lightboxImageIndex = 0;
 
         function changeImage(cardIndex, direction) {
-            currentIndexes[cardIndex] += direction;
             const total = imageLists[cardIndex].length;
-            if (currentIndexes[cardIndex] < 0) currentIndexes[cardIndex] = total - 1;
-            if (currentIndexes[cardIndex] >= total) currentIndexes[cardIndex] = 0;
+            currentIndexes[cardIndex] = (currentIndexes[cardIndex] + direction + total) % total;
             document.getElementById(`img-${cardIndex}`).src = imageLists[cardIndex][currentIndexes[cardIndex]];
         }
-    </script>
 
+        function openLightbox(cardIndex, imageIndex) {
+            lightboxCardIndex = cardIndex;
+            lightboxImageIndex = imageIndex;
+            document.getElementById("lightbox-img").src = imageLists[cardIndex][imageIndex];
+            document.getElementById("lightbox").classList.remove("hidden");
+            document.getElementById("lightbox").classList.add("flex");
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").classList.remove("flex");
+            document.getElementById("lightbox").classList.add("hidden");
+        }
+
+        function prevLightboxImage() {
+            const total = imageLists[lightboxCardIndex].length;
+            lightboxImageIndex = (lightboxImageIndex - 1 + total) % total;
+            document.getElementById("lightbox-img").src = imageLists[lightboxCardIndex][lightboxImageIndex];
+        }
+
+        function nextLightboxImage() {
+            const total = imageLists[lightboxCardIndex].length;
+            lightboxImageIndex = (lightboxImageIndex + 1) % total;
+            document.getElementById("lightbox-img").src = imageLists[lightboxCardIndex][lightboxImageIndex];
+        }
+
+        document.addEventListener("keydown", function (event) {
+            const lightbox = document.getElementById("lightbox");
+            if (!lightbox.classList.contains("hidden")) {
+                if (event.key === "Escape") closeLightbox();
+                else if (event.key === "ArrowLeft") prevLightboxImage();
+                else if (event.key === "ArrowRight") nextLightboxImage();
+            }
+        });
+    </script>
 </body>
 
 </html>
