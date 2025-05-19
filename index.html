@@ -1008,13 +1008,33 @@
             </div>
         </div>
     </nav>
-    <div class="relative bg-black flex items-center justify-center overflow-hidden">
-        <div id="slider" class="flex transition-transform duration-700 ease-in-out">
-            <img src="/images/banner/home.webp" class="max-w-full max-h-full object-contain flex-shrink-0" />
-            <img src="/images/banner/solution.webp" class="max-w-full max-h-full object-contain flex-shrink-0" />
-            <img src="/images/banner/training.webp" class="max-w-full max-h-full object-contain flex-shrink-0" />
+    <div class="relative flex items-center justify-center overflow-hidden">
+
+        <!-- ลูกศรซ้าย -->
+        <button onclick="moveSlide(-1)"
+            class="absolute left-4 z-10 bg-white/30 text-white hover:bg-white/50 p-3 rounded-full">
+            &#10094;
+        </button>
+
+        <div id="slider" class="flex transition-transform duration-700 ease-in-out w-full">
+            <img src="/images/banner/home.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
+                alt="1" />
+            <img src="/images/banner/solution.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
+                alt="2" />
+            <img src="/images/banner/training.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
+                alt="3" />
         </div>
+
+        <!-- ลูกศรขวา -->
+        <button onclick="moveSlide(1)"
+            class="absolute right-4 z-10 bg-white/30 text-white hover:bg-white/50 p-3 rounded-full">
+            &#10095;
+        </button>
+
+        <!-- จุดสถานะ (Pagination Dots) -->
+        <div id="paginationDots" class="absolute bottom-4 flex space-x-2"></div>
     </div>
+
     <main>
         <div class="max-w-7xl mx-auto px-4 py-8 mt-0">
             <div class="col-span-9">
@@ -1153,11 +1173,11 @@
                     <!-- ปุ่มเลื่อน -->
                     <button id="scrollLeft"
                         class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full p-2 shadow hover:bg-gray-100">
-                        &#8592;
+                        &#10094;
                     </button>
                     <button id="scrollRight"
                         class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full p-2 shadow hover:bg-gray-100">
-                        &#8594;
+                        &#10095;
                     </button>
 
                     <!-- Scrollable content -->
@@ -1168,7 +1188,8 @@
                             id="card-template">
                             <img src="/images/wokings/MTCUME-LKT/31325_0.jpg"
                                 data-image="/images/wokings/MTCUME-LKT/31325_0.jpg" alt="MTCUME-LKT"
-                                class="w-full h-48 object-cover rounded-t-lg" onclick="openLightbox(0, currentIndexes[0])" />
+                                class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(0, currentIndexes[0])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900">MTCUME-LKT</h3>
                             </div>
@@ -1177,7 +1198,8 @@
                         <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
                             id="card-template">
                             <img src="/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31369_0.jpg"
-                                alt="CCTV วิทยาลัยเทคโนโลยีแขนแก่น" class="w-full h-48 object-cover rounded-t-lg" onclick="openLightbox(1, currentIndexes[1])" />
+                                alt="CCTV วิทยาลัยเทคโนโลยีแขนแก่น" class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(1, currentIndexes[1])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900">CCTV วิทยาลัยเทคโนโลยีแขนแก่น</h3>
                             </div>
@@ -1326,13 +1348,62 @@
 <script>
     const slider = document.getElementById("slider");
     const slides = slider.children;
+    const paginationDots = document.getElementById("paginationDots");
     let index = 0;
+    const totalSlides = slides.length;
+    let intervalId;
 
-    setInterval(() => {
-        index = (index + 1) % slides.length;
+    // สร้างจุดสถานะ
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement("button");
+        dot.className = "w-3 h-3 rounded-full bg-white/50 hover:bg-white";
+        dot.onclick = () => {
+            goToSlide(i);
+            resetInterval();
+        };
+        paginationDots.appendChild(dot);
+    }
+
+    function updateSlider() {
+        console.log("Current slide index:", index);
         slider.style.transform = `translateX(-${index * 100}%)`;
-    }, 5000); // เปลี่ยนทุก 3 วินาที
+        updateDots();
+    }
 
+    function updateDots() {
+        const dots = paginationDots.children;
+        for (let i = 0; i < dots.length; i++) {
+            if (i === index) {
+                dots[i].classList.add("bg-white");
+                dots[i].classList.remove("bg-white/50");
+            } else {
+                dots[i].classList.add("bg-white/50");
+                dots[i].classList.remove("bg-white");
+            }
+        }
+    }
+
+    function moveSlide(direction) {
+        index = (index + direction + totalSlides) % totalSlides;
+        updateSlider();
+        resetInterval();
+    }
+
+    function goToSlide(i) {
+        index = i;
+        updateSlider();
+    }
+
+    function resetInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    }
+
+    // เริ่มต้น
+    updateSlider();
+    resetInterval();
     const imageLists = [
         [
             "/images/wokings/MTCUME-LKT/31317_0.jpg",
@@ -1445,6 +1516,8 @@
             else if (event.key === "ArrowRight") nextLightboxImage();
         }
     });
+
+
 </script>
 <!-- Create by Akirai -->
 
