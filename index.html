@@ -1008,31 +1008,33 @@
             </div>
         </div>
     </nav>
-    <div class="relative flex items-center justify-center overflow-hidden">
-
-        <!-- ลูกศรซ้าย -->
-        <button onclick="moveSlide(-1)"
-            class="absolute left-6 text-white text-4xl font-bold z-10 hover:bg-white/50 p-3 rounded-full">
-            &#10094;
-        </button>
-
-        <div id="slider" class="flex transition-transform duration-700 ease-in-out w-full">
-            <img src="/images/banner/home.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
-                alt="1" />
-            <img src="/images/banner/solution.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
-                alt="2" />
-            <img src="/images/banner/training.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
-                alt="3" />
+    <div id="scrollContainer" class="overflow-hidden">
+        <div class="relative flex items-center justify-center overflow-hidden">
+    
+            <!-- ลูกศรซ้าย -->
+            <button onclick="moveSlide(-1)"
+                class="hidden lg:block lg:absolute left-6 text-white text-4xl font-bold z-10 hover:bg-white/50 p-3 rounded-full">
+                &#10094;
+            </button>
+    
+            <div id="slider" class="flex transition-transform duration-700 ease-in-out w-full">
+                <img src="/images/banner/home.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
+                    alt="1" />
+                <img src="/images/banner/solution.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
+                    alt="2" />
+                <img src="/images/banner/training.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
+                    alt="3" />
+            </div>
+    
+            <!-- ลูกศรขวา -->
+            <button onclick="moveSlide(1)"
+                class="hidden lg:block lg:absolute right-6 text-white text-4xl font-bold z-10 hover:bg-white/50 p-3 rounded-full">
+                &#10095;
+            </button>
+    
+            <!-- จุดสถานะ (Pagination Dots) -->
+            <div id="paginationDots" class="absolute bottom-4 flex space-x-2"></div>
         </div>
-
-        <!-- ลูกศรขวา -->
-        <button onclick="moveSlide(1)"
-            class="absolute right-6 text-white text-4xl font-bold z-10 hover:bg-white/50 p-3 rounded-full">
-            &#10095;
-        </button>
-
-        <!-- จุดสถานะ (Pagination Dots) -->
-        <div id="paginationDots" class="absolute bottom-4 flex space-x-2"></div>
     </div>
 
     <main>
