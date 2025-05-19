@@ -177,6 +177,18 @@
         line-height: inherit
     }
 
+    #scrollContainer {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    #scrollContainer::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
     hr {
         height: 0;
         color: inherit;
@@ -1131,37 +1143,123 @@
                     </div>
                 </div>
                 <!-- works -->
-                <div class="bg-white rounded-xl shadow-sm p-6 mb-4">
-                    <div class="flex justify-between items-center mt-6">
+                <div class="relative bg-white rounded-xl shadow-sm p-6 mb-4">
+                    <div class="flex justify-between items-center mb-4">
                         <h2 class="text-2xl font-semibold text-orange-600">ผลงาน</h2>
                         <a href="/src/working.html"
-                            class="text-xl text-orange-500 px-3 hover:text-orange-600 font-medium transition-colors">ทั้งหมด</a>
+                            class="text-xl text-orange-500 hover:text-orange-600 font-medium transition-colors">ทั้งหมด</a>
                     </div>
-                    <div class="grid grid-cols-1 bg-white rounded-lg gap-4 mt-4 lg:grid-cols-3"
-                        onclick="location.href='/src/working.html'">
-                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
-                            <img src="/images/wokings/MTCUME-LKT/31325_0.jpg" alt="MTCUME-LKT"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+
+                    <!-- ปุ่มเลื่อน -->
+                    <button id="scrollLeft"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full p-2 shadow hover:bg-gray-100">
+                        &#8592;
+                    </button>
+                    <button id="scrollRight"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full p-2 shadow hover:bg-gray-100">
+                        &#8594;
+                    </button>
+
+                    <!-- Scrollable content -->
+                    <div id="scrollContainer"
+                        class="overflow-x-auto whitespace-nowrap scroll-smooth space-x-4 flex px-2 scrollbar-hide">
+
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
+                            <img src="/images/wokings/MTCUME-LKT/31325_0.jpg"
+                                data-image="/images/wokings/MTCUME-LKT/31325_0.jpg" alt="MTCUME-LKT"
+                                class="w-full h-48 object-cover rounded-t-lg" onclick="openLightbox(0, currentIndexes[0])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900">MTCUME-LKT</h3>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
-                            <img src="/images/wokings/Spuc/31417_0.jpg" alt="Spuc"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
+                            <img src="/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31369_0.jpg"
+                                alt="CCTV วิทยาลัยเทคโนโลยีแขนแก่น" class="w-full h-48 object-cover rounded-t-lg" onclick="openLightbox(1, currentIndexes[1])" />
                             <div class="p-4">
-                                <h3 class="font-medium text-gray-900">Spuc</h3>
+                                <h3 class="font-medium text-gray-900">CCTV วิทยาลัยเทคโนโลยีแขนแก่น</h3>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 bg-white rounded-lg  hover-lift">
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
                             <img src="/images/wokings/CRC/31342_0.jpg" alt="CRC"
-                                class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500 ease-in-out">
+                                class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(2, currentIndexes[2])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900">CRC</h3>
                             </div>
                         </div>
+
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
+                            <img src="/images/wokings/MTCRE LKT 9-101266/31387_0.jpg" alt="MTCRE-LKT"
+                                class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(3, currentIndexes[3])" />
+                            <div class="p-4">
+                                <h3 class="font-medium text-gray-900">MTCRE-LKT</h3>
+                            </div>
+                        </div>
+
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
+                            <img src="/images/wokings/Nas 29-30167/31396_0.jpg" alt="Nas"
+                                class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(4, currentIndexes[4])" />
+                            <div class="p-4">
+                                <h3 class="font-medium text-gray-900">Nas</h3>
+                            </div>
+                        </div>
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
+                            <img src="/images/wokings/NRC 18767/31378_0.jpg" alt="NRC"
+                                class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(5, currentIndexes[5])" />
+                            <div class="p-4">
+                                <h3 class="font-medium text-gray-900">NRC</h3>
+                            </div>
+                        </div>
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
+                            <img src="/images/wokings/Spuc/31417_0.jpg" alt="Spuc"
+                                class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(6, currentIndexes[6])" />
+                            <div class="p-4">
+                                <h3 class="font-medium text-gray-900">Spuc</h3>
+                            </div>
+                        </div>
+                        <div class="inline-block w-64 bg-white rounded-lg shadow hover-lift flex-shrink-0"
+                            id="card-template">
+                            <img src="/images/wokings/Synology -LKT 28368/31356_0.jpg" alt="Synology-LKT"
+                                class="w-full h-48 object-cover rounded-t-lg"
+                                onclick="openLightbox(7, currentIndexes[7])" />
+                            <div class="p-4">
+                                <h3 class="font-medium text-gray-900">Synology-LKT</h3>
+                            </div>
+                        </div>
+                        <div id="lightbox"
+                            class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+                            <button class="absolute top-4 right-6 text-white text-4xl font-bold"
+                                onclick="closeLightbox()">&times;</button>
+                            <button class="absolute left-4 text-white text-5xl font-bold"
+                                onclick="prevLightboxImage()">&#10094;</button>
+                            <img id="lightbox-img" src="" class="max-w-[90vw] max-h-[80vh] rounded shadow-lg" />
+                            <button class="absolute right-4 text-white text-5xl font-bold"
+                                onclick="nextLightboxImage()">&#10095;</button>
+                        </div>
                     </div>
                 </div>
+                <script>
+                    const container = document.getElementById("scrollContainer");
+                    document.getElementById("scrollLeft").onclick = () => {
+                        container.scrollBy({ left: -300, behavior: 'smooth' });
+                    };
+                    document.getElementById("scrollRight").onclick = () => {
+                        container.scrollBy({ left: 300, behavior: 'smooth' });
+                    };
+                </script>
+
                 <!-- product -->
                 <div class="bg-white rounded-xl shadow-sm p-6 mb-4">
                     <div class="flex items-center mb-6">
@@ -1234,6 +1332,119 @@
         index = (index + 1) % slides.length;
         slider.style.transform = `translateX(-${index * 100}%)`;
     }, 5000); // เปลี่ยนทุก 3 วินาที
+
+    const imageLists = [
+        [
+            "/images/wokings/MTCUME-LKT/31317_0.jpg",
+            "/images/wokings/MTCUME-LKT/31318_0.jpg",
+            "/images/wokings/MTCUME-LKT/31319_0.jpg",
+            "/images/wokings/MTCUME-LKT/31320_0.jpg",
+            "/images/wokings/MTCUME-LKT/31321_0.jpg",
+            "/images/wokings/MTCUME-LKT/31322_0.jpg"
+        ],
+        [
+            "/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31369_0.jpg",
+            "/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31370_0.jpg",
+            "/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31371_0.jpg",
+            "/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31372_0.jpg",
+            "/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31373_0.jpg",
+            "/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31374_0.jpg"
+
+        ],
+        [
+            "/images/wokings/CRC/31341_0.jpg",
+            "/images/wokings/CRC/31342_0.jpg",
+            "/images/wokings/CRC/31343_0.jpg",
+            "/images/wokings/CRC/31344_0.jpg",
+            "/images/wokings/CRC/31345_0.jpg",
+            "/images/wokings/CRC/31346_0.jpg"
+        ],
+        [
+            "/images/wokings/MTCRE LKT 9-101266/31387_0.jpg",
+            "/images/wokings/MTCRE LKT 9-101266/31388_0.jpg",
+            "/images/wokings/MTCRE LKT 9-101266/31389_0.jpg",
+            "/images/wokings/MTCRE LKT 9-101266/31390_0.jpg",
+            "/images/wokings/MTCRE LKT 9-101266/31391_0.jpg",
+            "/images/wokings/MTCRE LKT 9-101266/31392_0.jpg",
+        ],
+        [
+            "/images/wokings/Nas 29-30167/31396_0.jpg",
+            "/images/wokings/Nas 29-30167/31397_0.jpg",
+            "/images/wokings/Nas 29-30167/31398_0.jpg",
+            "/images/wokings/Nas 29-30167/31399_0.jpg",
+            "/images/wokings/Nas 29-30167/31400_0.jpg",
+            "/images/wokings/Nas 29-30167/31401_0.jpg"
+
+        ],
+        [
+            "/images/wokings/NRC 18767/31378_0.jpg",
+            "/images/wokings/NRC 18767/31379_0.jpg",
+            "/images/wokings/NRC 18767/31380_0.jpg",
+            "/images/wokings/NRC 18767/31381_0.jpg",
+            "/images/wokings/NRC 18767/31382_0.jpg",
+            "/images/wokings/NRC 18767/31383_0.jpg"
+        ],
+        [
+            "/images/wokings/Spuc/31417_0.jpg",
+            "/images/wokings/Spuc/31418_0.jpg",
+            "/images/wokings/Spuc/31419_0.jpg",
+            "/images/wokings/Spuc/31420_0.jpg",
+            "/images/wokings/Spuc/31421_0.jpg",
+            "/images/wokings/Spuc/31422_0.jpg"
+        ],
+        [
+            "/images/wokings/Synology -LKT 28368/31356_0.jpg",
+            "/images/wokings/Synology -LKT 28368/31357_0.jpg",
+            "/images/wokings/Synology -LKT 28368/31358_0.jpg",
+            "/images/wokings/Synology -LKT 28368/31359_0.jpg",
+            "/images/wokings/Synology -LKT 28368/31360_0.jpg",
+            "/images/wokings/Synology -LKT 28368/31361_0.jpg"
+        ]
+    ];
+
+    let currentIndexes = [0, 0, 0, 0, 0, 0, 0, 0];
+    let lightboxCardIndex = 0;
+    let lightboxImageIndex = 0;
+
+    function changeImage(cardIndex, direction) {
+        const total = imageLists[cardIndex].length;
+        currentIndexes[cardIndex] = (currentIndexes[cardIndex] + direction + total) % total;
+        document.getElementById(`img-${cardIndex}`).src = imageLists[cardIndex][currentIndexes[cardIndex]];
+    }
+
+    function openLightbox(cardIndex, imageIndex) {
+        lightboxCardIndex = cardIndex;
+        lightboxImageIndex = imageIndex;
+        document.getElementById("lightbox-img").src = imageLists[cardIndex][imageIndex];
+        document.getElementById("lightbox").classList.remove("hidden");
+        document.getElementById("lightbox").classList.add("flex");
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("flex");
+        document.getElementById("lightbox").classList.add("hidden");
+    }
+
+    function prevLightboxImage() {
+        const total = imageLists[lightboxCardIndex].length;
+        lightboxImageIndex = (lightboxImageIndex - 1 + total) % total;
+        document.getElementById("lightbox-img").src = imageLists[lightboxCardIndex][lightboxImageIndex];
+    }
+
+    function nextLightboxImage() {
+        const total = imageLists[lightboxCardIndex].length;
+        lightboxImageIndex = (lightboxImageIndex + 1) % total;
+        document.getElementById("lightbox-img").src = imageLists[lightboxCardIndex][lightboxImageIndex];
+    }
+
+    document.addEventListener("keydown", function (event) {
+        const lightbox = document.getElementById("lightbox");
+        if (!lightbox.classList.contains("hidden")) {
+            if (event.key === "Escape") closeLightbox();
+            else if (event.key === "ArrowLeft") prevLightboxImage();
+            else if (event.key === "ArrowRight") nextLightboxImage();
+        }
+    });
 </script>
 <!-- Create by Akirai -->
 
