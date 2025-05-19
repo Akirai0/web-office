@@ -541,10 +541,6 @@
         height: 20rem;
     }
 
-    .h-96 {
-        height: 24rem;
-    }
-
     .h-100 {
         height: 25rem;
     }
@@ -573,10 +569,6 @@
         width: 1.5rem
     }
 
-    .w-112 {
-        width: 28rem
-    }
-
     .w-120 {
         width: 30rem
     }
@@ -587,6 +579,10 @@
 
     .w-48 {
         width: 12rem
+    }
+
+    .w-60 {
+        width: 15rem
     }
 
     .max-w-7xl {
@@ -992,7 +988,7 @@
     <!-- Main -->
     <main>
         <div class="max-w-7xl mx-auto px-4 py-8">
-            <div class="col-span-9">
+            <div class="col-span-9 space-y-2">
                 <nav class="mb-8">
                     <ol class="flex items-center space-x-2">
                         <li><a href="/index.html" class="text-gray-500 hover:text-gray-700">หน้าแรก</a></li>
@@ -1006,134 +1002,191 @@
                         </li>
                     </ol>
                 </nav>
-                <div class="bg-white rounded-xl shadow-sm p-6">
-                    <h2 class="text-2xl font-semibold mb-6">ผลงาน</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer"
-                            id="card-template">
-                            <img id="img-0" src="/images/wokings/MTCUME-LKT/31325_0.jpg" alt="รูป"
-                                class="object-contain rounded-t-lg" onclick="openLightbox(0, currentIndexes[0])">
-
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">MTCUME-LKT</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">อบรมหลักสูตร MTCUME ณ LionKing Technology</p>
-                                <a onclick="openLightbox(0, currentIndexes[0])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer"
-                            id="card-template">
-                            <img id="img-1" src="/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31369_0.jpg" alt=""
-                                class="object-contain rounded-t-lg" onclick="openLightbox(1, currentIndexes[1])">
-
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">CCTV วิทยาลัยเทคโนโลยีแขนแก่น</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">งานติดตั้ง CCTV ณ วิทยาลัยเทคโนโลยีแขนแก่น
-                                </p>
-                                <a onclick="openLightbox(1, currentIndexes[1])"
-                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer" id="card-template">
-                            <img id="img-2" src="/images/wokings/CRC/31342_0.jpg" alt="" class="object-contain rounded-t-lg" onclick="openLightbox(2, currentIndexes[2])">
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">CRC</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">งานติดตั้ง CRC ณ มหาวิทยาลัยเชียงราย</p>
-                                <a onclick="openLightbox(2, currentIndexes[2])"
-                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer" id="card-template">
-                            <img id="img-3" src="/images/wokings/MTCRE LKT 9-101266/31391_0.jpg" class="object-contain rounded-t-lg" onclick="openLightbox(3, currentIndexes[3])">
-
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">MTCRE-LKT</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">อบรมหลักสูตร MTCRE ณ LionKing Technology</p>
-                                <a onclick="openLightbox(3, currentIndexes[3])"
-                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer" id="card-template">
-                            <img id="img-4" src="/images/wokings/Nas 29-30167/31396_0.jpg" class="object-contain rounded-t-lg" onclick="openLightbox(4, currentIndexes[4])">
-
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">Nas</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">อบรมหลักสูตร Nas</p>
-                                <a onclick="openLightbox(4, currentIndexes[4])"
-                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer" id="card-template">
-                            <img id="img-5" src="/images/wokings/NRC 18767/31378_0.jpg" class="object-contain rounded-t-lg" onclick="openLightbox(5, currentIndexes[5])">
-
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">NRC</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">งานติดตั้ง NRC</p>
-                                <a onclick="openLightbox(5, currentIndexes[5])"
-                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer" id="card-template">
-                            <img id="img-6" src="/images/wokings/Spuc/31417_1.jpg" class="object-contain rounded-t-lg" onclick="openLightbox(6, currentIndexes[6])">
-
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">Spuc</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">งานอบรม ณ มหาวิทยาลัยศรีปทุม</p>
-                                <a onclick="openLightbox(6, currentIndexes[6])"
-                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg border shadow hover:shadow-lg transition duration-300 cursor-pointer" id="card-template">
-                            <img id="img-7" src="/images/wokings/Synology -LKT 28368/31356_0.jpg" class="object-contain rounded-t-lg" onclick="openLightbox(7, currentIndexes[7])">
-
-                            <div class="py-4 px-4">
-                                <p class="text-orange-500 font-semibold">Synology-LKT</p>
-                                <p class="text-sm text-gray-500 mt-2 mb-6">อบรมหลักสูตร Synology ณ LionKing Technology
-                                </p>
-                                <a onclick="openLightbox(7, currentIndexes[7])"
-                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
-                                    ดูทั้งหมด
-                                </a>
-                            </div>
-                        </div>
-                        <div id="lightbox"
-                            class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-                            <button class="absolute top-4 right-6 text-white text-4xl font-bold"
-                                onclick="closeLightbox()">&times;</button>
-                            <button class="absolute left-4 text-white text-5xl font-bold"
-                                onclick="prevLightboxImage()">&#10094;</button>
-                            <img id="lightbox-img" src="" class="max-w-[90vw] max-h-[80vh] rounded shadow-lg" />
-                            <button class="absolute right-4 text-white text-5xl font-bold"
-                                onclick="nextLightboxImage()">&#10095;</button>
-                        </div>
-                    </div>
+                <h2 class="text-2xl font-semibold mb-1">ผลงาน</h2>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 mb-6">
+            <!-- image -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-0" src="/images/wokings/MTCUME-LKT/31317_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(0, currentIndexes[0])" />
+                    <button onclick="changeImage(0, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(0, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">MTCUME-LKT</div>
+                    <!-- <div class="text-sm text-gray-700 leading-snug">
+                        xxxxxxxxxxxxxxxxxxxxxxxxxx<br />
+                        xxxxxxxxxxxxxxxxxxxxxxxxxx
+                    </div> -->
                 </div>
             </div>
+            <!-- Card2 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-1" src="/images/wokings/CCTV วิทยาลัยเทคโนโลยีแขนแก่น/31369_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(1, currentIndexes[1])" />
+                    <button onclick="changeImage(1, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(1, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">CCTV วิทยาลัยเทคโนโลยีแขนแก่น</div>
+                </div>
+            </div>
+            <!-- Card3 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-2" src="/images/wokings/CRC/31341_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(2, currentIndexes[2])" />
+                    <button onclick="changeImage(2, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(2, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">CRC</div>
+                </div>
+            </div>
+            <!-- Card4 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-3" src="/images/wokings/MTCRE LKT 9-101266/31387_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(3, currentIndexes[3])" />
+                    <button onclick="changeImage(3, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(3, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">MTCRE-LKT</div>
+                </div>
+            </div>
+            <!-- Card5 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-4" src="/images/wokings/Nas 29-30167/31396_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(4, currentIndexes[4])" />
+                    <button onclick="changeImage(4, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(4, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">Nas</div>
+                </div>
+            </div>
+            <!-- Card6 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-5" src="/images/wokings/NRC 18767/31378_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(5, currentIndexes[5])" />
+                    <button onclick="changeImage(5, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(5, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">NRC</div>
+                </div>
+            </div>
+            <!-- Card7 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-6" src="/images/wokings/Spuc/31417_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(6, currentIndexes[6])" />
+                    <button onclick="changeImage(6, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(6, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">Spuc</div>
+                </div>
+            </div>
+            <!-- Card8 -->
+            <div class="bg-white rounded-xl shadow p-4 mb-6" id="card-template">
+                <div class="relative h-100 border rounded">
+                    <img id="img-7" src="/images/wokings/Synology -LKT 28368/31356_0.jpg" alt="รูป"
+                        class="w-full h-full object-cover rounded cursor-pointer"
+                        onclick="openLightbox(7, currentIndexes[7])" />
+                    <button onclick="changeImage(7, -1)"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ‹
+                    </button>
+                    <button onclick="changeImage(7, 1)"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-orange-500 text-7xl">
+                        ›
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="text-orange-500 font-semibold">Synology-LKT</div>
+                </div>
+            </div>
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+                <button class="absolute top-4 right-6 text-white text-4xl font-bold"
+                    onclick="closeLightbox()">&times;</button>
+                <button class="absolute left-4 text-white text-5xl font-bold"
+                    onclick="prevLightboxImage()">&#10094;</button>
+                <img id="lightbox-img" src="" class="max-w-[90vw] max-h-[80vh] rounded shadow-lg" />
+                <button class="absolute right-4 text-white text-5xl font-bold"
+                    onclick="nextLightboxImage()">&#10095;</button>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div id="footer"></div>
+        <script>
+            // ตรวจสอบการโหลดไฟล์ footer.html
+            fetch('/componnent/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด footer:', error));
+        </script>
     </main>
-    <!-- Footer -->
-    <div id="footer"></div>
-    <script>
-        // ตรวจสอบการโหลดไฟล์ footer.html
-        fetch('/componnent/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => console.error('เกิดข้อผิดพลาดในการโหลด footer:', error));
 
+    <script>
         const imageLists = [
             [
                 "/images/wokings/MTCUME-LKT/31317_0.jpg",
@@ -1309,6 +1362,5 @@
         });
     </script>
 </body>
-<!-- Create by Akirai -->
 
 </html>
