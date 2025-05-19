@@ -1008,34 +1008,42 @@
             </div>
         </div>
     </nav>
-    <div id="scrollContainer" class="overflow-hidden">
+    <div id="scrollContainerH" class="overflow-hidden">
         <div class="relative flex items-center justify-center overflow-hidden">
-    
             <!-- ลูกศรซ้าย -->
             <button onclick="moveSlide(-1)"
                 class="hidden lg:block lg:absolute left-6 text-white text-4xl font-bold z-10 hover:bg-white/50 p-3 rounded-full">
                 &#10094;
             </button>
-    
+
             <div id="slider" class="flex transition-transform duration-700 ease-in-out w-full">
                 <img src="/images/banner/home.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
                     alt="1" />
-                <img src="/images/banner/solution.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
-                    alt="2" />
-                <img src="/images/banner/training.webp" class="max-w-full max-h-full object-contain flex-shrink-0 w-screen"
-                    alt="3" />
+                <img src="/images/banner/solution.webp"
+                    class="max-w-full max-h-full object-contain flex-shrink-0 w-screen" alt="2" />
+                <img src="/images/banner/training.webp"
+                    class="max-w-full max-h-full object-contain flex-shrink-0 w-screen" alt="3" />
             </div>
-    
+
             <!-- ลูกศรขวา -->
             <button onclick="moveSlide(1)"
                 class="hidden lg:block lg:absolute right-6 text-white text-4xl font-bold z-10 hover:bg-white/50 p-3 rounded-full">
                 &#10095;
             </button>
-    
+
             <!-- จุดสถานะ (Pagination Dots) -->
             <div id="paginationDots" class="absolute bottom-4 flex space-x-2"></div>
         </div>
     </div>
+    <script>
+        const container2 = document.getElementById("scrollContainerH");
+        document.getElementById("scrollLeft").onclick = () => {
+            container.scrollBy({ left: -1920, behavior: 'smooth' });
+        };
+        document.getElementById("scrollRight").onclick = () => {
+            container.scrollBy({ left: 1920, behavior: 'smooth' });
+        };
+    </script>
 
     <main>
         <div class="max-w-7xl mx-auto px-4 py-8 mt-0">
@@ -1194,7 +1202,8 @@
                                 onclick="openLightbox(0, currentIndexes[0])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">MTCUME-LKT</h3>
-                                <a onclick="openLightbox(0, currentIndexes[0])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(0, currentIndexes[0])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
@@ -1207,7 +1216,8 @@
                                 onclick="openLightbox(1, currentIndexes[1])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">CCTV วิทยาลัยเทคโนโลยีแขนแก่น</h3>
-                                <a onclick="openLightbox(1, currentIndexes[1])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(1, currentIndexes[1])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
@@ -1219,7 +1229,8 @@
                                 onclick="openLightbox(2, currentIndexes[2])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">CRC</h3>
-                                <a onclick="openLightbox(2, currentIndexes[2])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(2, currentIndexes[2])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
@@ -1232,7 +1243,8 @@
                                 onclick="openLightbox(3, currentIndexes[3])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">MTCRE-LKT</h3>
-                                <a onclick="openLightbox(3, currentIndexes[3])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(3, currentIndexes[3])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
@@ -1245,7 +1257,8 @@
                                 onclick="openLightbox(4, currentIndexes[4])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">Nas</h3>
-                                <a onclick="openLightbox(4, currentIndexes[4])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(4, currentIndexes[4])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
@@ -1257,7 +1270,8 @@
                                 onclick="openLightbox(5, currentIndexes[5])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">NRC</h3>
-                                <a onclick="openLightbox(5, currentIndexes[5])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(5, currentIndexes[5])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
@@ -1269,7 +1283,8 @@
                                 onclick="openLightbox(6, currentIndexes[6])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">Spuc</h3>
-                                <a onclick="openLightbox(6, currentIndexes[6])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(6, currentIndexes[6])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
@@ -1281,7 +1296,8 @@
                                 onclick="openLightbox(7, currentIndexes[7])" />
                             <div class="p-4">
                                 <h3 class="font-medium text-gray-900 mb-2">Synology-LKT</h3>
-                                <a onclick="openLightbox(7, currentIndexes[7])" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
+                                <a onclick="openLightbox(7, currentIndexes[7])"
+                                    class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 rounded-full transition duration-300">
                                     ดูทั้งหมด
                                 </a>
                             </div>
